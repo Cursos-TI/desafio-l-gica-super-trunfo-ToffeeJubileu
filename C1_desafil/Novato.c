@@ -2,7 +2,7 @@
 
 int main() {
     
-    int pontos, pontos1;
+    int pontos, pontos1, opcao;
     float popul, por, area, area1, pib, pib1, populacao, populacao1, sp;
     char nome[20], nome1[20];
 
@@ -69,29 +69,94 @@ int main() {
 
         printf("Pessoas por Km² é menor do que PIB?: %d\n", popul < pib);
         printf("Pontos Turísticos é maior do que Super Poder?: %d\n", pontos > sp);
+    
+     printf("Escolha uma opção de Atributos:\n");
+     printf("1. Cidade de: %s\n", nome);
+     printf("2. Cidade de: %s\n", nome1);
+     scanf("%d", &opcao);
+     printf("3. População de: %s\n", nome);
+     printf("4. População de: %s\n", nome1);
+     scanf("%d", &opcao);
+     printf("5. área de: %s\n", nome);
+     printf("6. área de: %s\n", nome1);
+     scanf("%d", &opcao);
+     printf("7. PID de: %s\n", nome);
+     printf("8. PID de: %s\n", nome1);
+     scanf("%d", &opcao);
+     printf("9. Turístas de: %s\n", nome);
+     printf("0. Turístas de: %s\n", nome1);
+     scanf("%d", &opcao);
+
+     switch (opcao) {
+     case 1:
+        printf("%d", nome);
+        break;
+     case 2:
+        printf("%d", nome1);
+        break;
+     case 3:
+        printf("%.2f", populacao);
+        break;
+     case 4:
+        printf("%.2f", populacao1);
+        break;
+     case 5:
+        printf("%.2f", area);
+        break;
+     case 6:
+        printf("%.2f", area1);
+        break;
+     case 7:
+        printf("%.2f", pib);
+        break;
+     case 8:
+        printf("%.2f", pib1);
+        break;
+     case 9:
+        printf("%d", pontos);
+        break;
+     case 0:
+        printf("%d", pontos1);
+        break;
+    }
+
+    if ((populacao == populacao1) || (area == area1) || (pib == pib1) || (pontos == pontos1))
+        {
+            printf("### Jogo empatou! ###\n");
+        } else if ((populacao == 3) && (populacao1 == 4) ||
+                   (area == 5) && (area1 == 6) ||
+                   (pib == 7) && (pib1 == 8) ||
+                   (pontos == 9) && (pontos1 == 0))
+        {
+          printf("### Parabéns, você ganhou! ###");
+        } else{
+           printf("### Você Perdeu! ###\n");
+        }
 
         if (populacao < populacao1){
-            printf("O ganhador é: %s com pontos de %.2f\n", nome, populacao);
+            printf("O ganhador de População é: %s com pontos de %.2f\n", nome, populacao);
         }else {
-            printf("O ganhador é: %s com pontos de %.2f\n", nome1, populacao1);
+            printf("O ganhador de População é: %s com pontos de %.2f\n", nome1, populacao1);
         }
         
         if (area > area1){
-            printf("O ganhador é: %s com pontos de %.2f\n", nome, area);
+            printf("O ganhador de Área é: %s com pontos de %.2f\n", nome, area);
         }else {
-            printf("O ganhador é: %s com pontos de %.2f\n", nome1, area1);
+            printf("O ganhador de Área é: %s com pontos de %.2f\n", nome1, area1);
         }
 
         if (pib > pib1){
-            printf("O ganhador é: %s com pontos de %.2f\n", nome, pib);
+            printf("O ganhador de PID é: %s com pontos de %.2f\n", nome, pib);
         }else {
-            printf("O ganhador é: %s com pontos de %.2f\n", nome1, pib1);
+            printf("O ganhador de PID é: %s com pontos de %.2f\n", nome1, pib1);
         }
 
         if (pontos > pontos1){
-            printf("O ganhador é: %s com pontos de %d\n", nome, pontos);
+            printf("O ganhador de Turístas é: %s com pontos de %d\n", nome, pontos);
         }else {
-            printf("O ganhador é: %s com pontos de %d\n", nome1, pontos1);
+            printf("O ganhador de Turístas é: %s com pontos de %d\n", nome1, pontos1);
         }
+
+
 
 }
