@@ -89,10 +89,10 @@ int main() {
 
      switch (opcao) {
      case 1:
-        printf("%d", nome);
+        printf("%s", nome);
         break;
      case 2:
-        printf("%d", nome1);
+        printf("%s", nome1);
         break;
      case 3:
         printf("%.2f", populacao);
@@ -120,40 +120,76 @@ int main() {
         break;
     }
 
-    if ((populacao == populacao1) || (area == area1) || (pib == pib1) || (pontos == pontos1))
-        {
-            printf("### Jogo empatou! ###\n");
-        } else if ((populacao == 3) && (populacao1 == 4) ||
-                   (area == 5) && (area1 == 6) ||
-                   (pib == 7) && (pib1 == 8) ||
-                   (pontos == 9) && (pontos1 == 0))
-        {
-          printf("### Parabéns, você ganhou! ###");
-        } else{
-           printf("### Você Perdeu! ###\n");
-        }
+    if (populacao == populacao1)
+        { printf("### Jogo empatou! ###\n");
+       }
+       if (area == area1)
+       { printf("### Jogo empatou! ###\n");
+      }
+      if (pib == pib1)
+      { printf("### Jogo empatou! ###\n");
+     }
+     if (pontos == pontos1)
+     { printf("### Jogo empatou! ###\n");
+    }
 
+       if (populacao < populacao1)
+       {   printf("### Parabéns, você ganhou! é:%s ###\n", nome, nome1);
+       } else{
+          printf("### Você Perdeu! é:%s ###\n", nome, nome1);
+       }
+
+       if (area > area1)
+       {   printf("### Parabéns, você ganhou! é:%s ###\n", nome, nome1);
+       } else{
+          printf("### Você Perdeu! é:%s ###\n", nome, nome1);
+       }
+
+       if (pib > pib1)
+       {   printf("### Parabéns, você ganhou! é:%s ###\n", nome, nome1);
+       } else{
+          printf("### Você Perdeu! é:%s ###\n", nome, nome1);
+       }
+
+       if (pontos > pontos1)
+       {   printf("### Parabéns, você ganhou! é:%s ###\n", nome, nome1);
+       } else{
+          printf("### Você Perdeu! é:%s ###\n", nome, nome1);
+       }
+       
         if (populacao < populacao1){
             printf("O ganhador de População é: %s com pontos de %.2f\n", nome, populacao);
+        } else if (populacao == populacao1)
+        {
+        printf("### Jogo empatou pontos de População ###\n");  
         }else {
             printf("O ganhador de População é: %s com pontos de %.2f\n", nome1, populacao1);
         }
         
         if (area > area1){
             printf("O ganhador de Área é: %s com pontos de %.2f\n", nome, area);
+        } else if (area == area1)
+        {
+        printf("### Jogo empatou pontos de Áreas ###\n");  
         }else {
             printf("O ganhador de Área é: %s com pontos de %.2f\n", nome1, area1);
         }
 
         if (pib > pib1){
             printf("O ganhador de PID é: %s com pontos de %.2f\n", nome, pib);
-        }else {
+        } else if (pib == pib1)
+        {
+        printf("### Jogo empatou pontos de PID ###\n");  }
+        else {
             printf("O ganhador de PID é: %s com pontos de %.2f\n", nome1, pib1);
         }
 
         if (pontos > pontos1){
             printf("O ganhador de Turístas é: %s com pontos de %d\n", nome, pontos);
-        }else {
+        } else if (pontos == pontos1)
+        {
+        printf("### Jogo empatou pontos de Turístos ###\n");  }
+        else {
             printf("O ganhador de Turístas é: %s com pontos de %d\n", nome1, pontos1);
         }
 
