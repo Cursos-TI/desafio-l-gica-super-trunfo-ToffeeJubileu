@@ -5,7 +5,8 @@ int main() {
     int pontos, pontos1, opcao;
     float popul, por, area, area1, pib, pib1, populacao, populacao1, sp;
     char nome[20], nome1[20];
-
+         
+      // cadastrado a primeira carta 
         printf("Digite o Nome de Uma Cidade que faz Parte do Estado de Goiás: \n");
         scanf("%s", &nome);
 
@@ -21,10 +22,12 @@ int main() {
         printf("Digite o Número de Pontos Turísticos: \n");
         scanf("%d", &pontos);
 
+        // calculando os ponto da primeira carta
         popul = (populacao / area);
         por = (pib / populacao);
         sp = (populacao + area + pib + pontos);
 
+        //imprimido a primeira carta registrada
     printf("Cidade: %s\n", nome);
     printf("População: %.2f HAB\n", populacao);
     printf("Área: %.2f Km²\n", area);
@@ -35,9 +38,11 @@ int main() {
     printf("Salário por Pessoas: %.2f Min.\n", por);
     printf("Super Poder: %.2f Pontos\n", sp);
 
+    //imprimido e calculando a primeira carta registrada
     printf("Pessoas por Km² é menor do que PIB?: %d\n", popul < pib);
     printf("Pontos Turísticos é maior do que Super Poder?: %d\n", pontos > sp);
     
+         //cadastrando a segunda carta 
             printf("Digite o Nome de Uma Cidade que faz Parte do Estado de Goiás: \n");
             scanf("%s", &nome1);
 
@@ -53,10 +58,12 @@ int main() {
             printf("Digite o Número de Pontos Turísticos: \n");
             scanf("%d", &pontos1);
 
+            //calculando os pontos da segunda carta
             popul = (populacao1 / area1);
             por = (pib1 / populacao1);
             sp = (populacao1 + area1 + pib1 + pontos1);
 
+            //imprimindo a segunda casta registrada
         printf("Cidade: %s\n", nome1);
         printf("População: %.2f HAB\n", populacao1);
         printf("Área: %.2f Km²\n", area1);
@@ -67,9 +74,11 @@ int main() {
         printf("Salário por Pessoas: %.2f Min.\n", por);
         printf("Super Poder: %.2f Pontos\n", sp);
 
+         //imprimindo e calculando a segunda casta registrada
         printf("Pessoas por Km² é menor do que PIB?: %d\n", popul < pib);
         printf("Pontos Turísticos é maior do que Super Poder?: %d\n", pontos > sp);
     
+        //lista de escolha de pontos das cartas 
      printf("Escolha uma opção de Atributos:\n");
      printf("1. Cidade de: %s\n", nome);
      printf("2. Cidade de: %s\n", nome1);
@@ -87,6 +96,7 @@ int main() {
      printf("0. Turístas de: %s\n", nome1);
      scanf("%d", &opcao);
 
+     //calculando resuntado de pontos de cartas 
      switch (opcao) {
      case 1:
         printf("%s", nome);
@@ -120,6 +130,7 @@ int main() {
         break;
       }
       
+      //demostração do resuntado de escolhas e pontos
       printf("!!! Calculando sua Escolha !!!\n");
       if (populacao < populacao1)
        {   printf("### Parabéns, você ganhou! é:%s ###\n", nome);
